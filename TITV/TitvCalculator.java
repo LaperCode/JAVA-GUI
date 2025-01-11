@@ -24,6 +24,7 @@ public class TitvCalculator extends JFrame {
         JPanel jPanel_head = new JPanel();
         jPanel_head.setLayout(new BorderLayout());
         jPanel_head.add(jTextField, BorderLayout.CENTER);
+
     JPanel p = new JPanel();
     p.setLayout(new BorderLayout());
     p.add(new Button("Reset"), BorderLayout.WEST);
@@ -61,7 +62,7 @@ public class TitvCalculator extends JFrame {
         jPanel_buttons.add(jButton_chia);
         jPanel_buttons.add(jButton_bang);
 
-        // Set Frame và add 2 Panel vào Frame
+        // Set Frame và add 3 Panel vào Frame
         this.setLayout(new BorderLayout());
         this.add(jPanel_head, BorderLayout.NORTH);
         this.add(jPanel_buttons, BorderLayout.CENTER);
