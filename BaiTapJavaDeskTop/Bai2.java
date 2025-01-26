@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
 
 public class Bai2 extends JFrame {
     private JTextField txtDai, txtRong, txtDienTich, txtChuVi;
@@ -22,7 +23,7 @@ public class Bai2 extends JFrame {
         // this.setLayout(new GridLayout(5, 2));
 
         JPanel mainPanel = new JPanel(new GridLayout(4, 2, 10, 10));
-        mainPanel.setBorder(null);
+        mainPanel.setBorder(new EmptyBorder(20, 20, 20, 20)); // Thêm khoảng đệm
 
         JLabel lblDai = new JLabel("Nhập chiều dài hình chữ nhật: ");
         txtDai = new JTextField();
