@@ -1,5 +1,4 @@
 package TITV;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import java.awt.GridLayout;

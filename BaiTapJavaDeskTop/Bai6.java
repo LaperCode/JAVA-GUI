@@ -66,6 +66,8 @@ public class Bai6 extends JFrame {
 
     private int getNhap() {
         try {
+            String numberString = txtNumber.getText().trim();
+            if(numberString.isEmpty()) throw new IllegalArgumentException("Không được để trống");
             int n = Integer.parseInt(txtNumber.getText().trim());
             if(n<0) {
                 JOptionPane.showMessageDialog(this, "Cần nhập số tự nhiên n không âm!", "Lỗi", JOptionPane.ERROR_MESSAGE);
@@ -75,9 +77,13 @@ public class Bai6 extends JFrame {
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "Vui lòng nhập một số nguyên hợp lệ!", "Lỗi", JOptionPane.ERROR_MESSAGE);
             return -1;
+        } catch (IllegalArgumentException e) {
+               JOptionPane.showMessageDialog(null, e.getMessage(), "Lỗi", JOptionPane.ERROR_MESSAGE);
+            return -1;
         }
     }
     
+    //Câu a
     private void displayAllNumbers() {
         int n = getNhap();
         if (n < 0)
@@ -92,6 +98,7 @@ public class Bai6 extends JFrame {
         txtOutput.setText(result.toString());
     }
 
+    //Câu b
     private void displayEvenNumbers() {
         int n = getNhap();
         if(n<0) return;
@@ -105,6 +112,7 @@ public class Bai6 extends JFrame {
         txtOutput.setText(result.toString());
     }
 
+    //Câu c
     private void displayOddNumbers() {
         int n = getNhap();
         if(n<0) return;
@@ -118,6 +126,7 @@ public class Bai6 extends JFrame {
         txtOutput.setText(result.toString());
     }
     
+    //Câu d
     private void displayPrimeNumbers() {
         int n = getNhap();
         if(n<0) return;
@@ -133,6 +142,7 @@ public class Bai6 extends JFrame {
         txtOutput.setText(result.toString());
     }
     
+    //Câu e
     private void displayFirstNPrimes() {
         int n = getNhap();
         if(n<0) return;
